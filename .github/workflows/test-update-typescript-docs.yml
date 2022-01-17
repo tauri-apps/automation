@@ -1,0 +1,10 @@
+name: test-update-typescript-docs
+on:
+  workflow_call:
+
+jobs:
+  get-latest-tauri-files:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello"
+      - uses: update-typescript-docs@dev
