@@ -8,9 +8,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    # - run: yarn add typedoc typedoc-plugin-markdown typescript
-    #   shell: bash
-    # - run: yarn typedoc
-    #   shell: bash
+    - run: cd ${{ github.action_path }} && yarn
+      shell: bash
     - run: tree .
+      shell: bash
+    - run: tree ${{ inputs.docs-input-path }}
       shell: bash
