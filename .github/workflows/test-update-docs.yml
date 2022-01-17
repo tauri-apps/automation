@@ -1,0 +1,8 @@
+name: test-update-docs
+on: [push]
+
+jobs:
+  run-typescript-update-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/update-typescript-docs@dev

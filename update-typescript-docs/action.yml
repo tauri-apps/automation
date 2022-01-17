@@ -1,0 +1,12 @@
+name: update-typescript-docs
+inputs:
+  docsInputPath:
+    required: true
+# output:
+#   generatedDocs:
+#     value: ${{ insert here }}
+runs:
+  using: "composite"
+  steps:
+    - run: echo "test"
+      shell: bash

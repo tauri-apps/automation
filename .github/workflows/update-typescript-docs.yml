@@ -1,9 +1,0 @@
-name: update-typescript-docs
-on:
-  workflow_call:
-
-jobs:
-  build-docs:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello"

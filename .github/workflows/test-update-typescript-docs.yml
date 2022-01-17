@@ -1,8 +1,0 @@
-name: test-update-typescript-docs
-on:
-  push:
-  workflow_dispatch:
-
-jobs:
-  get-latest-tauri-files:
-    uses: tauri-apps/github-actions/.github/workflows/update-typescript-docs.yml@dev
