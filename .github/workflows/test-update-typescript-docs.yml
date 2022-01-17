@@ -8,6 +8,6 @@ jobs:
     name: Tests the dev version of test-update-typescript
     steps:
       - name: Test update typescript doc
-        uses: tauri-apps/tauri-actions/update-typescript-doc@dev
+        uses: tauri-apps/tauri-actions/update-typescript-docs@dev
         with:
           node-version: '16'
