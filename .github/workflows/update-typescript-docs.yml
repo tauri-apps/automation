@@ -22,9 +22,7 @@ jobs:
           repository: ${{ inputs.tauriRepo }}
           path: tauri
       - uses: actions/setup-node@v2
-      - run: ls /
       - run: ls .
-      - run: ls ../
       - run: yarn && yarn build
         working-directory: update-typescript-docs
       - uses: actions/upload-artifact@v2
