@@ -8,7 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "$GITHUB_WORKSPACE ${{ inputs.docs-update-path }}"
+    - run: tree $GITHUB_WORKSPACE
       shell: bash
     # - run: |
     # cd ${{ github.action_path }}
