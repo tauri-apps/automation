@@ -8,9 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo Path ${{ inputs.docs-input-path }}
-      shell: bash
-    - run: tree .
+    - run: yarn add typedoc typedoc-plugin-markdown typescript
       shell: bash
     - run: tree ${{ inputs.docs-input-path }}
       shell: bash
