@@ -10,3 +10,7 @@ runs:
   steps:
     - run: echo Path ${{ inputs.docs-input-path }}
       shell: bash
+    - run: tree .
+      shell: bash
+    - run: tree ${{ inputs.docs-input-path }}
+      shell: bash
