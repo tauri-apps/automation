@@ -12,8 +12,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  clone-tauri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          name: tauri-apps/tauri
+      - run: ls
   # This workflow contains a single job called "build"
   run-test:
     uses: tauri-apps/github-actions/.github/workflows/update-typescript-docs.yml@dev
+    needs: clone-tauri
     with:
       sourceDir: docs  
