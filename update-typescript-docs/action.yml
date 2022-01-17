@@ -4,5 +4,8 @@ runs:
   using: 'composite'
   steps:
     - run: echo "Beginning build"
+      shell: bash
     - run: yarn && yarn build
+      shell: bash
     - run: echo "Build finished"
+      shell: bash
