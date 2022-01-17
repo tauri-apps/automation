@@ -12,9 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - run: cp -r ${{ github.event.inputs.sourceDir }} docs
       - run: yarn && yarn build
         working-directory: update-typescript-docs
       - uses: actions/upload-artifact@v2
         with:
           name: js-docs
-          path: docs
+          path: output
