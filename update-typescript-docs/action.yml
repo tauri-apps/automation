@@ -2,15 +2,11 @@ name: update-typescript-docs
 inputs:
   docs-input-path:
     required: true
-# output:
-#   generatedDocs:
-#     value: ${{ insert here }}
 runs:
   using: "composite"
   steps:
     - run: cd ${{ inputs.docs-input-path }} && yarn add typedoc typescript
       shell: bash
-    - run: cd ${{ inputs.docs-input-path }} && yarn typedoc src --tsconfig tsconfig.json
+    - run: cd ${{ inputs.docs-input-path }} && yarn typedoc src --tsconfig tsconfig.json --out $GITHUB_WORKSPACE
       shell: bash
-    - run: cd ${{ inputs.docs-input-path }} && tree .
-      shell: bash
+
