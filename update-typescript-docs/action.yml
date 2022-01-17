@@ -10,5 +10,7 @@ runs:
   steps:
     - run: yarn add typedoc typedoc-plugin-markdown typescript
       shell: bash
-    - run: tree ${{ inputs.docs-input-path }}
+    - run: typedoc
+      shell: bash
+    - run: tree .
       shell: bash
