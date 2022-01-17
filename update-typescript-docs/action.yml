@@ -10,7 +10,7 @@ runs:
   steps:
     - run: tree $GITHUB_WORKSPACE/${{ inputs.docs-input-path }}
       shell: bash
-    - run: cd ${{ github.action_path }} && yarn && yarn build --entryPoints $GITHUB_WORKSPACE/${{ inputs.docs-input-path }}/src
+    - run: cd ${{ github.action_path }} && yarn && yarn build -- $GITHUB_WORKSPACE/${{ inputs.docs-input-path }}/src
       shell: bash
     - run: tree .
       shell: bash
