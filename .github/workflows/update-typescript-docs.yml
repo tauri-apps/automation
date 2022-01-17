@@ -1,8 +1,12 @@
 name: update-typescript-doc
 on: workflow_dispatch
+
+defaults:
+  run:
+    working-directory: update-typescript-docs
   
 jobs:
   prepare-environment:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, world!"
+      - run: yarn
