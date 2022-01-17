@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - run: tree /
       - run: cp -r ${{ inputs.sourceDir }} docs/
       - run: yarn && yarn build
         working-directory: update-typescript-docs
