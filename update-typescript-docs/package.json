@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "ls && typedoc 'tauri/tooling/api/' --out output --plugin typedoc-plugin-markdown --tsconfig 'tauri/tooling/api/tsconfig.json' --hideInPageTOC true --hideBreadcrumbs true --githubPages false"
+    "build": "ls && typedoc '../tauri/tooling/api/' --out output --plugin typedoc-plugin-markdown --tsconfig '../tauri/tooling/api/tsconfig.json' --hideInPageTOC true --hideBreadcrumbs true --githubPages false"
   },
   "devDependencies": {
     "@actions/core": "^1.6.0",
