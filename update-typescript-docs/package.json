@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "typedoc --plugin typedoc-plugin-markdown"
+    "build": "build.js"
   },
   "devDependencies": {
     "@actions/core": "^1.6.0",
