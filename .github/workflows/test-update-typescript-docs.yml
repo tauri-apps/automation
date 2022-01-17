@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          name: tauri-apps/tauri
+          repository: tauri-apps/tauri
       - run: ls
   # This workflow contains a single job called "build"
   run-test:
