@@ -11,5 +11,6 @@ jobs:
           path: tauri
       - uses: tauri-apps/github-actions/update-typescript-docs@dev
         with:
-          docs-input-path: tauri/tooling/api
+          tsconfig-filepath: tauri/tooling/api/tsconfig.json
+          entry-points: tauri/tooling/api/src/index.ts
       - run: tree .

@@ -1,12 +1,14 @@
 name: update-typescript-docs
 inputs:
-  docs-input-path:
+  tsconfig-filepath:
     required: true
-runs:
-  using: "composite"
-  steps:
-    - run: cd ${{ inputs.docs-input-path }} && yarn add typedoc typescript
-      shell: bash
-    - run: cd ${{ inputs.docs-input-path }} && yarn typedoc src --tsconfig tsconfig.json --out $GITHUB_WORKSPACE/output
-      shell: bash
+  entry-points:
+    required: true
+    description: index.ts file that is used as the entrypoint to being generating docs
+outputs:
+  output:
+    description: Where the generated files are stored
 
+runs:
+  using: "nodejs"
+  main: "index.js"
