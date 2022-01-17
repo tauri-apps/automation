@@ -1,15 +1,14 @@
 {
   "name": "update-typescript-docs",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
-    "compile": "ncc build src/index.js",
-    "test": "",
-    "build": "echo 'I'm building'"
+    "test": "yarn build",
+    "build": "typedoc --plugin typedoc-plugin-markdown"
   },
   "devDependencies": {
     "@actions/core": "^1.6.0",
-    "@actions/github": "^5.0.0",
-    "@vercel/ncc": "^0.33.1"
+    "@actions/github": "^5.0.0"
   },
   "dependencies": {
     "typedoc": "^0.22.10",
