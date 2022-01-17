@@ -1,9 +1,12 @@
 name: update-typescript-doc
-on: workflow_dispatch
+on: [push, workflow_dispatch]
   
 jobs:
   prepare-environment:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn && yarn build
+      - run: yarn
+  build-docs:
+    steps:
+      - run: yarn build
