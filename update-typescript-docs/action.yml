@@ -8,8 +8,8 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: yarn add typedoc typedoc-plugin-markdown typescript
-      shell: bash
+    # - run: yarn add typedoc typedoc-plugin-markdown typescript
+    #   shell: bash
     # - run: yarn typedoc
     #   shell: bash
     - run: tree .
