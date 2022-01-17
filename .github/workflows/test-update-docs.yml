@@ -11,4 +11,4 @@ jobs:
           path: tauri
       - uses: tauri-apps/github-actions/update-typescript-docs@dev
         with:
-          docs-input-path: tauri/tools/api
+          docs-input-path: tauri/tooling/api
