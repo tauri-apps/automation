@@ -10,7 +10,7 @@ runs:
   steps:
     - run: yarn add typedoc typedoc-plugin-markdown typescript
       shell: bash
-    - run: typedoc
+    - run: yarn typedoc
       shell: bash
     - run: tree .
       shell: bash
