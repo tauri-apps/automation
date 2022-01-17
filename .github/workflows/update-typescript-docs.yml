@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo ${{ github.events.inputs.tauriRepo }}
+      - run: echo ${{ github.event.inputs.tauriRepo }}
       - uses: actions/checkout@v2
         with:
-          repository: ${{ github.events.inputs.tauriRepo }}
+          repository: ${{ github.event.inputs.tauriRepo }}
           path: tauri
       - uses: actions/setup-node@v2
       - run: tree
