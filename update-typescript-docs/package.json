@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "typedoc"
+    "build": "typedoc process.env.entryPoints"
   },
   "dependencies": {
     "typedoc": "^0.22.10",

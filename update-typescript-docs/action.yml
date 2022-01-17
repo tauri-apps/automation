@@ -8,7 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: cd ${{ github.action_path }} && yarn && yarn build
+    - run: cd ${{ github.action_path }} && yarn && yarn build --entryPoints ${{ inputs.docs-update-path }}
       shell: bash
     - run: tree .
       shell: bash
