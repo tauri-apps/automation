@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "test": "yarn build",
     "build": "typedoc --plugin typedoc-plugin-markdown"
   },
   "devDependencies": {
