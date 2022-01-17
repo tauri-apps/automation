@@ -9,6 +9,7 @@ runs:
   using: "composite"
   steps:
     - run: echo $GITHUB_WORKSPACE ${{ inputs.docs-update-path }}
+      shell: bash
     # - run: |
     # cd ${{ github.action_path }}
     # && yarn
