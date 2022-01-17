@@ -7,6 +7,6 @@ runs:
   steps:
     - run: cd ${{ inputs.docs-input-path }} && yarn add typedoc typescript
       shell: bash
-    - run: cd ${{ inputs.docs-input-path }} && yarn typedoc src --tsconfig tsconfig.json --out $GITHUB_WORKSPACE
+    - run: cd ${{ inputs.docs-input-path }} && yarn typedoc src --tsconfig tsconfig.json --out $GITHUB_WORKSPACE/output
       shell: bash
 
