@@ -5,4 +5,4 @@ jobs:
   prepare-environment:
     runs-on: ubuntu-latest
     steps:
-      - run: ech "Hello, world!"
+      - run: echo "Hello, world!"
