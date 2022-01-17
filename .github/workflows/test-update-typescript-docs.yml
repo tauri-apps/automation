@@ -5,7 +5,5 @@ on:
 jobs:
   test-update-typescript-doc:
     runs-on: ubuntu-latest
-    name: Tests the dev version of test-update-typescript
     steps:
-      - name: Test update typescript doc
-        uses: tauri-apps/github-actions/update-typescript-docs@dev
+      - uses: tauri-apps/github-actions/update-typescript-docs@dev
