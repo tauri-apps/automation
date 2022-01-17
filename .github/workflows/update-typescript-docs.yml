@@ -11,3 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: yarn build
+        working-directory: 'update-typescript-docs'
