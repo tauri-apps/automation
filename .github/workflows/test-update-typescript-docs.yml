@@ -9,5 +9,3 @@ jobs:
     steps:
       - name: Test update typescript doc
         uses: tauri-apps/tauri-actions/update-typescript-docs@dev
-        with:
-          node-version: '16'
