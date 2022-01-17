@@ -1,5 +1,8 @@
 name: 'Update Typescript Documentation'
 description: 'Pulls the API docs from the Tauri branch and submits a PR to tauri-docs'
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: 'composite'
+  steps:
+    - run: echo "Beginning build"
+    - run: yarn && yarn build
+    - run: echo "Build finished"
