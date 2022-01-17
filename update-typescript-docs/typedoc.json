@@ -1,0 +1,7 @@
+{
+    "out": "output",
+    "plugin": "typedoc-plugin-markdown",
+    "hideInPageTOC": true,
+    "hideBreadcrumbs": true,
+    "githubPages": false
+}
