@@ -1,8 +1,14 @@
 name: update-typescript-doc
 on:
+  workflow_dispatch:
+    inputs:
+      tauriRepo:
+        required: true
+        type: string
+        default: tauri-apps/tauri
   workflow_call:
     inputs:
-      sourceDir:
+      tauriRepo:
         required: true
         type: string
   
@@ -11,9 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          repository: ${{ inputs.tauriRepo }}
       - uses: actions/setup-node@v2
-      - run: tree .
-      - run: cp -r ${{ inputs.sourceDir }} docs/
       - run: yarn && yarn build
         working-directory: update-typescript-docs
       - uses: actions/upload-artifact@v2
