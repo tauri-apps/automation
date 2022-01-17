@@ -8,9 +8,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: yarn add typedoc typescript
+    - run: cd ${{ inputs.docs-input-path }} && yarn add typedoc typescript
       shell: bash
-    - run: yarn typedoc ${{ inputs.docs-input-path }}/src --tsconfig ${{ inputs.docs-input-path }}/tsconfig.json
+    - run: cd ${{ inputs.docs-input-path }} && yarn typedoc ${{ inputs.docs-input-path }}/src --tsconfig ${{ inputs.docs-input-path }}/tsconfig.json
       shell: bash
-    - run: tree .
+    - run: cd ${{ inputs.docs-input-path }} && tree .
       shell: bash
