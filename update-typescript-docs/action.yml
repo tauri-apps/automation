@@ -1,6 +1,6 @@
 name: update-typescript-docs
 inputs:
-  docsInputPath:
+  docs-input-path:
     required: true
 # output:
 #   generatedDocs:
@@ -8,5 +8,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "test"
+    - run: echo Path ${{ inputs.docs-input-path }}
       shell: bash
