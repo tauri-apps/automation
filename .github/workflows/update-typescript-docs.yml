@@ -2,7 +2,7 @@ name: update-typescript-doc
 on: workflow_dispatch
   
 jobs:
-  update-typescript-doc:
+  prepare-environment:
     runs-on: ubuntu-latest
     steps:
-      - uses: tauri-apps/github-actions/update-typescript-docs@dev
+      - run: ech "Hello, world!"
