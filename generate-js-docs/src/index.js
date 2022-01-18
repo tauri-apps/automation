@@ -18,9 +18,11 @@ function run() {
 
     if (project) {
       app.generateDocs(project, outputDir);
+    } else {
+      core.setFailed("Files weren't able to be converted")
     }
 
-    core.setOutput("output", outputDir);
+    // core.setOutput("output", outputDir);
   } catch (error) {
     core.setFailed(error.message);
   }
