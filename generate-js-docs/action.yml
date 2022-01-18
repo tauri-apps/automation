@@ -1,14 +1,18 @@
 name: generate-js-docs
 inputs:
   tsconfig-filepath:
-    required: true
+    description: .tsconfig file used for indicating the root directory.
+    required: false
+    default: ".tsconfig"
   entry-points:
-    required: true
-    description: index.ts file that is used as the entrypoint to being generating docs
+    description: File that is used as the entrypoint to being generating docs.
+    required: false
+    default: "src/index.ts"
 outputs:
   output-path:
     description: Where the generated files are stored
-
+    required: false
+    default: "docs"
 runs:
   using: "node12"
   main: "index.js"
