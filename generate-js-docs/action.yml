@@ -1,4 +1,4 @@
-name: update-typescript-docs
+name: generate-js-docs
 inputs:
   tsconfig-filepath:
     required: true
@@ -6,7 +6,7 @@ inputs:
     required: true
     description: index.ts file that is used as the entrypoint to being generating docs
 outputs:
-  output:
+  output-path:
     description: Where the generated files are stored
 
 runs:

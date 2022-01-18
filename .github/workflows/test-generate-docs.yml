@@ -1,15 +1,15 @@
-name: test-update-docs
+name: test-generate-docs
 on: [push]
 
 jobs:
-  run-typescript-update-docs:
+  run-generate-js-docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           repository: tauri-apps/tauri
           path: tauri
-      - uses: tauri-apps/github-actions/update-typescript-docs@dev
+      - uses: tauri-apps/github-actions/generate-ts-docs@dev
         with:
           tsconfig-filepath: tauri/tooling/api/tsconfig.json
           entry-points: tauri/tooling/api/src/index.ts
