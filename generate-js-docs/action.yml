@@ -13,4 +13,4 @@ outputs:
     description: Where the generated files are stored
 runs:
   using: "node12"
-  main: "index.js"
+  main: "dist/index.js"

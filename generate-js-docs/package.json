@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "ncc build src/index.js --license licenses.txt",
     "run": "index.js"
   },
   "keywords": [],
@@ -16,5 +17,7 @@
     "typedoc": "^0.22.10",
     "typescript": "^4.5.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.1"
+  }
 }
