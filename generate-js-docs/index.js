@@ -8,7 +8,6 @@ async function run() {
     const tsconfigFilepath = core.getInput("tsconfig-filepath");
     const entryPoints = core.getInput("entry-points");
     const outputDir = "."
-    console.log(`entryPoints: ${entryPoints}`);
 
     const app = new TypeDoc.Application();
 
