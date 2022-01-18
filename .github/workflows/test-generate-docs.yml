@@ -8,9 +8,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: tauri-apps/tauri
-          path: tauri
-      - uses: tauri-apps/github-actions/generate-ts-docs@dev
+      - uses: tauri-apps/github-actions/generate-js-docs@dev
         with:
-          tsconfig-filepath: tauri/tooling/api/tsconfig.json
-          entry-points: tauri/tooling/api/src/index.ts
+          tsconfig-filepath: tooling/api/tsconfig.json
+          entry-points: tooling/api/src/index.ts
       - run: tree .
