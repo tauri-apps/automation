@@ -6,7 +6,11 @@ const payload = fetch(process.env.DISCORD_WEBHOOK, {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    content: `[\`${github.context.payload.commits[0].message}\`](https://tauri.app) merged in \`${github.context.repo.repo}\`! Thanks \`${github.context.payload.commits[0].author.username}\` 🥳`,
+    content: `[\`${JSON.stringify(
+      github.context.payload.commits[0]
+    )}\`](https://tauri.app) merged in \`${
+      github.context.repo.repo
+    }\`! Thanks \`${github.context.payload.commits[0].author.username}\` 🥳`,
     embeds: null,
     attachments: [],
     flags: 4,
