@@ -21,4 +21,4 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@0.3.2
         with:
-          args: 'Thanks `${{ github.event.commits[0].author.username }}` for `${{ github.event.commits[0].message }}` in `${{ github.event.repository.name }}`) 🎉 <${{ github.event.commits[0].url }}>'
+          args: 'Thanks `${{ github.event.commits[0].author.username }}` for `${{ github.event.commits[0].message }}` in `${{ github.event.repository.name }}` 🎉 \n <${{ github.event.commits[0].url }}>'
