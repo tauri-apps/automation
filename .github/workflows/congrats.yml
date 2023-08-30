@@ -6,4 +6,5 @@ jobs:
   reusable_workflow_job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello, world"
+      - name: Send congrats
+        run: echo "thank you!"
