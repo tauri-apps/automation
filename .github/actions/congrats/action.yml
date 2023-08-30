@@ -1,3 +1,3 @@
 runs:
-  using: 'node16'
+  using: 'node18'
   main: 'main.mjs'
