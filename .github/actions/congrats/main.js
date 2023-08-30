@@ -1,6 +1,6 @@
 const github = require('@actions/github');
 
-const payload = fetch(process.env.DISCORD_WEBHOOK, {
+fetch(process.env.DISCORD_WEBHOOK, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -9,7 +9,7 @@ const payload = fetch(process.env.DISCORD_WEBHOOK, {
     content: `[\`${
       github.context.payload.commits[0].message.split('\n')[0]
     }\`](${github.context.payload.commits[0].url}) merged in \`${
-      github.context.repo.repo
+      github.context.payload.repository.url
     }\`! Thanks \`${github.context.payload.commits[0].author.username}\` 🥳`,
     embeds: null,
     attachments: [],
