@@ -1,0 +1,12 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "Automations that are used across the `tauri-apps` GitHub organization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

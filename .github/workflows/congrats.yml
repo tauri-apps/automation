@@ -12,13 +12,9 @@ on:
               3. Navigate to “Integrations” > “View Webhooks”.
               4. Click “New Webhook” and copy the URL for your newly created webhook.
           required: true
+
 jobs:
   post-message:
     runs-on: ubuntu-latest
     steps:
-      - name: Send message on Discord
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        uses: Ilshidur/action-discord@0.3.2
-        with:
-          args: 'Thanks `${{ github.event.commits[0].author.username }}` for `${{ github.event.commits[0].message }}` in `${{ github.event.repository.name }}` 🎉  <${{ github.event.commits[0].url }}>'
+      - uses: ./.github/actions/congrats
