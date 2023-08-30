@@ -2,6 +2,7 @@ name: Congrats
 # Adapted from https://github.com/withastro/automation/blob/main/.github/workflows/congratsbot.yml
 
 on:
+  workflow_dispatch:
   workflow_call:
     secrets:
         DISCORD_WEBHOOK:
