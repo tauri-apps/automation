@@ -6,11 +6,11 @@ const payload = fetch(process.env.DISCORD_WEBHOOK, {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    content: `[\`${JSON.stringify(
-      github.context.payload.head_commit.message
-    )}\`](${github.context.payload.head_commit.url}) merged in \`${
+    content: `[\`${
+      github.context.payload.commits[0].message.split('\n')[0]
+    }\`](${github.context.payload.commits[0].url}) merged in \`${
       github.context.repo.repo
-    }\`! Thanks \`${github.context.payload.head_commit.author.username}\` 🥳`,
+    }\`! Thanks \`${github.context.payload.commits[0].author.username}\` 🥳`,
     embeds: null,
     attachments: [],
     flags: 4,
