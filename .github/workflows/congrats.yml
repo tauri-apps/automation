@@ -2,7 +2,7 @@ name: Congrats
 # Adapted from https://github.com/withastro/automation/blob/main/.github/workflows/congratsbot.yml
 
 on:
-  workflow_dispatch:
+  push:
   workflow_call:
     secrets:
         DISCORD_WEBHOOK:
@@ -20,3 +20,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/congrats
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
