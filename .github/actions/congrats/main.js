@@ -1,4 +1,4 @@
-import github from '@actions/github';
+const github = require('@actions/github');
 
 fetch(process.env.DISCORD_WEBHOOK, {
   method: 'POST',
