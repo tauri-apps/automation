@@ -1,3 +1,5 @@
+name: Congrats
+
 on:
   workflow_call:
 jobs:
