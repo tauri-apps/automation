@@ -7,10 +7,10 @@ const payload = fetch(process.env.DISCORD_WEBHOOK, {
   },
   body: JSON.stringify({
     content: `[\`${JSON.stringify(
-      github.context.payload.commits[0].message
-    )}\`](${github.context.payload.commits[0].url}) merged in \`${
+      github.context.payload.head_commit.message
+    )}\`](${github.context.payload.head_commit.url}) merged in \`${
       github.context.repo.repo
-    }\`! Thanks \`${github.context.payload.commits[0].author.username}\` 🥳`,
+    }\`! Thanks \`${github.context.payload.head_commit.author.username}\` 🥳`,
     embeds: null,
     attachments: [],
     flags: 4,
