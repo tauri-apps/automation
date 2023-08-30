@@ -1,7 +1,16 @@
 const github = require('@actions/github');
 
-const commit = github.context.payload.commits[0];
 const repo = github.context.payload.repository;
+const commit = github.context.payload.commits[0];
+// Removes "Signed-off-by" text
+const commitMessage = commit.message.split('\n')[0];
+
+const emojis = ['🥳', '🎉', '💜', '💪', '🦾'];
+const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+const thanksMessages = ['Thanks'];
+const thanksMessage =
+  thanksMessages[Math.floor(Math.random() * thanksMessages.length)];
 
 fetch(process.env.DISCORD_WEBHOOK, {
   method: 'POST',
@@ -9,11 +18,7 @@ fetch(process.env.DISCORD_WEBHOOK, {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    content: `[\`${commit.message.split('\n')[0]}\`](${
-      commit.url
-    }) merged in [\`${repo.name}\`](${repo.url})! Thanks \`${
-      commit.author.username
-    }\` 🥳`,
+    content: `[\`${commitMessage}\`](${commit.url}) merged in [\`${repo.name}\`](${repo.url})! ${thanksMessage} \`${commit.author.username}\` ${emoji}`,
     embeds: null,
     attachments: [],
     flags: 4,
