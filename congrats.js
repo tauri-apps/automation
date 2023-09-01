@@ -6,7 +6,7 @@ const commit = github.context.payload.commits[0];
 // Removes "Signed-off-by" text
 const commitMessage = commit.message.split('\n')[0];
 
-const emojis = ['🥳', '🎉', '💜', '💪', '🦾'];
+const emojis = ['🥳', '🎉', '💪', '🦾', '🧑‍💻'];
 const emoji = emojis[Math.floor(Math.random() * emojis.length)];
 
 const thanksMessages = ['Thank you,'];
