@@ -19,6 +19,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/congrats
+        with:
+          repository: 'tauri-apps/automation'
+          ref: 'main'
+          path: 'automation'
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Send message
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: node automation/congrats.js
+
