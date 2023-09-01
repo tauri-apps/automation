@@ -27,9 +27,3 @@ jobs:
     secrets:
       DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
 ```
-
-## Actions
-
-### [`congrats`](.github/actions/congrats)
-
-Used by the `congrats` **workflow**, prefer to use workflow directly.
