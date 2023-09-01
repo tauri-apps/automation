@@ -9,20 +9,7 @@ const commitMessage = commit.message.split('\n')[0];
 const emojis = ['🥳', '🎉', '💜', '💪', '🦾'];
 const emoji = emojis[Math.floor(Math.random() * emojis.length)];
 
-const thanksMessages = [
-  'Thanks',
-  'Gracias, thank you',
-  'Merci, thank you',
-  'Grazie, thank you',
-  'Danke, thank you',
-  'Bedankt, thank you',
-  'Obrigado, thank you',
-  '谢谢, thank you',
-  'شكرًا, thank you',
-  'धन्यवाद, thank you',
-  'ありがとう, thank you',
-  'Mulţumesc, thank you',
-];
+const thanksMessages = ['Thank you,'];
 const thanksMessage =
   thanksMessages[Math.floor(Math.random() * thanksMessages.length)];
 
