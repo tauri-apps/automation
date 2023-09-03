@@ -5,8 +5,6 @@ function congrats() {
   // Only works for `push` type of actions for now as this code assumes data in `github.context.payload` is for a `push` type
   const commit = github.context.payload.commits[0];
 
-  console.log(commit.message);
-
   // Ignore CI messages
   if (commit.message.startsWith('[ci]')) {
     return;
