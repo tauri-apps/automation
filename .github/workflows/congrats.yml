@@ -16,6 +16,8 @@ on:
 
 jobs:
   post-message:
+    # Prevents running workflow on forks
+    if: ${{ github.repository_owner == 'tauri-apps' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -30,4 +32,3 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: node automation/congrats.js
-
