@@ -9,8 +9,8 @@ function congrats() {
   if (commit.message.startsWith('[ci]')) {
     return;
   }
-  // Removes "Signed-off-by" text
-  const commitMessage = commit.message.split('\n')[0];
+  // Removes "Signed-off-by" text, escape '`' symbols
+  const commitMessage = commit.message.split('\n')[0].replaceAll('`', '');
 
   const emojis = ['🥳', '🎉', '💪', '🦾', '🧑‍💻'];
   const emoji = emojis[Math.floor(Math.random() * emojis.length)];
