@@ -1,15 +1,16 @@
 name: CI
 
 on:
-  push:
-  pull_request:
-  schedule: [cron: "40 1 * * *"]
+  workflow_call:
 
 permissions:
   contents: read
 
 env:
   RUSTFLAGS: -Dwarnings
+  RUST_BACKTRACE: 1
+  CARGO_TERM_COLOR: always
+  CLICOLOR: 1
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
