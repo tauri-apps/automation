@@ -31,4 +31,4 @@ jobs:
       - name: Send message
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        run: node automation/congrats.js
+        run: node automation/congrats/congrats.js
