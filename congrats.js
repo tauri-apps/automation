@@ -9,6 +9,11 @@ function congrats() {
   if (commit.message.startsWith('[ci]')) {
     return;
   }
+  // Ignore dependency bot commits
+  if (commit.author.username === "dependabot[bot]" || commit.author.username === "renovate[bot]") {
+    return;
+  }
+
   // Removes "Signed-off-by" text, escape '`' symbols
   const commitMessage = commit.message.split('\n')[0].replaceAll('`', '');
 
